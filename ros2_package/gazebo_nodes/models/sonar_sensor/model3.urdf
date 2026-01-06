@@ -1,0 +1,77 @@
+
+
+  <?xml version='1.0'?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="laser_hokuyo">
+<!--x=92.09, y=-3.12, z=0.55, r=-0.0, p= 0.0, Y=0.613 -->
+<xacro:arg name="namespace" default=""/>
+  
+  <!--<link name="world"/>-->
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+
+  
+  <link name="$(arg namespace)base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+    </inertial>
+    <collision name="collision">
+      <geometry>
+         <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+        <geometry>
+            <mesh filename="package://prius_description/meshes/hokuyo.dae"/>
+        </geometry>
+    </visual>
+  </link>
+
+  <!-- Add the fixed joint between "world" and "base_link"
+  <joint name="fixed_joint" type="fixed">
+    <parent link="world"/>
+    <child link="$(arg namespace)base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  -->
+  <link name="$(arg namespace)laser_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+  </link>
+    
+  <joint name="laser_joint" type="fixed">
+    <parent link="$(arg namespace)base_link"/>
+    <child link="$(arg namespace)laser_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  
+
+
+ <gazebo reference="$(arg namespace)laser_link">
+  <sensor name="sonar_hokuyo" type="sonar">
+    <pose>0 0 0 1.5708 0 0</pose> <!-- Adjust the yaw angle to 90 degrees -->
+    <sonar>
+      <min>0.2</min>
+      <max>3.5</max>
+      <geometry>cone</geometry> <!-- or "cylinder" depending on your sensor -->
+      <radius>0.2</radius> <!-- adjust the radius according to your sensor -->
+    </sonar>
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <visualize>true</visualize>
+    <plugin name="gazebo_ros_sonar_hokuyo_controller" filename="libgazebo_ros_range.so">
+      <ros>
+        <remapping>~/out:=/$(arg namespace)sonar_scan</remapping>
+      </ros>
+      <output_type>sensor_msgs/Range</output_type>
+      <frame_name>$(arg namespace)laser_link</frame_name>
+    </plugin>
+  </sensor>
+</gazebo>
+
+</robot>

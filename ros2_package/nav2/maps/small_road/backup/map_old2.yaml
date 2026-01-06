@@ -1,0 +1,14 @@
+image: map.pgm
+mode: trinary
+resolution: 0.05
+#origin: [-34.9, -65.3, 0]
+#origin: [1, -63.779806 , 1.576879]
+#origin: [-4.24, -63.78 , 1.576879]
+
+#Adding to the first value makes it go up
+#Adding to the second makes it go right
+#The third value makes it rotate
+origin: [-2.2, -29.2, 0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.25

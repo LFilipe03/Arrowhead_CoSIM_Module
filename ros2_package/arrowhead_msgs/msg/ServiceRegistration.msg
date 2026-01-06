@@ -1,0 +1,3 @@
+int32 service_validation
+string server_addrport
+arrowhead_msgs/ServiceData service_data

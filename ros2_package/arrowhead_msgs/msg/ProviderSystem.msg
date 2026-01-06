@@ -1,0 +1,5 @@
+string address
+string authentication_info
+arrowhead_msgs/ServiceMetadata metadata
+int32 port
+string system_name

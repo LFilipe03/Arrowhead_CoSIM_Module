@@ -1,0 +1,7 @@
+string[] interfaces
+arrowhead_msgs/ServiceMetadata metadata
+arrowhead_msgs/ProviderSystem provider_system
+string secure
+string service_definition
+string service_uri
+int32 version

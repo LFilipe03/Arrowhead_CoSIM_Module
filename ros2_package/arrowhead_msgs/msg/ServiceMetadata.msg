@@ -1,0 +1,2 @@
+string highway_name
+int32 entrance_number
