@@ -1,0 +1,215 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-795560c4914927556545.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				},
+				{
+					"build" : "services_discovery_interfaces__py",
+					"jsonFile" : "directory-services_discovery_interfaces__py-b9a93170aac8ba538f75.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/services_discovery_interfaces__py",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "services_discovery_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces-25650b0e2dc3dab6f6c2.json",
+					"name" : "services_discovery_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__cpp-799b0ccf84ea0f2213cc.json",
+					"name" : "services_discovery_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "services_discovery_interfaces__py::@d1ba38e2572c3c4369a8",
+					"jsonFile" : "target-services_discovery_interfaces__py-7631437d69157cda8703.json",
+					"name" : "services_discovery_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__python::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__python-05def1831df381fd734d.json",
+					"name" : "services_discovery_interfaces__python",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_generator_c-42feaa089f8c96e44dd1.json",
+					"name" : "services_discovery_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_c-9bcacc4ce8d2e536f559.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_c__pyext-d58f4033ca9d1f2ec542.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_cpp-e59c15073c1487140c76.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_fastrtps_c-2fe1f72de40f0493e2b5.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_fastrtps_c__pyext-a83c4a8a1da8c966b5bd.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_fastrtps_cpp-8d686db3f51dc4ed3823.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_introspection_c-ab1db59d26070f48c777.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_introspection_c__pyext-869002ba27f6052e32ea.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces__rosidl_typesupport_introspection_cpp-2a6b7bf4d5417f958870.json",
+					"name" : "services_discovery_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_discovery_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_discovery_interfaces_uninstall-06191fc41260b55d155e.json",
+					"name" : "services_discovery_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-84fcc4a2f4751543a9d7.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces",
+		"source" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/services_discovery_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

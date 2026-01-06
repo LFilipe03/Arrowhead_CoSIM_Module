@@ -1,0 +1,123 @@
+[0.021s] Invoking command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub
+[0.067s] -- The C compiler identification is GNU 9.4.0
+[0.116s] -- The CXX compiler identification is GNU 9.4.0
+[0.133s] -- Detecting C compiler ABI info
+[0.190s] -- Detecting C compiler ABI info - done
+[0.198s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.199s] -- Detecting C compile features
+[0.199s] -- Detecting C compile features - done
+[0.210s] -- Detecting CXX compiler ABI info
+[0.276s] -- Detecting CXX compiler ABI info - done
+[0.287s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.288s] -- Detecting CXX compile features
+[0.288s] -- Detecting CXX compile features - done
+[0.291s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.296s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.297s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.297s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.297s]   the cmake_policy command to set the policy and suppress this warning.
+[0.297s] 
+[0.297s] Call Stack (most recent call first):
+[0.297s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.297s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.297s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.297s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.297s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.297s]   CMakeLists.txt:8 (find_package)
+[0.297s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.297s] [0m
+[0.316s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.316s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.380s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.421s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.429s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.517s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.559s] -- Found FastRTPS: /opt/ros/galactic/include  
+[0.627s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.670s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.673s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.691s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.692s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.751s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.752s] -- Looking for pthread_create in pthreads
+[0.795s] -- Looking for pthread_create in pthreads - not found
+[0.795s] -- Looking for pthread_create in pthread
+[0.846s] -- Looking for pthread_create in pthread - found
+[0.847s] -- Found Threads: TRUE  
+[0.939s] -- Found services_registry_interfaces: 0.0.0 (/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry_interfaces/share/services_registry_interfaces/cmake)
+[0.966s] -- Found GTest: /usr/lib/x86_64-linux-gnu/libgtest.a  
+[1.017s] -- Configuring done (1.0s)
+[1.032s] -- Generating done (0.0s)
+[1.036s] -- Build files have been written to: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub
+[1.042s] Invoked command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub
+[1.044s] Invoking command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake --build /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub -- -j12 -l12
+[1.068s] [  8%] [32mBuilding CXX object CMakeFiles/traffic.dir/src/TrafficRun.cpp.o[0m
+[1.068s] [ 16%] [32mBuilding CXX object CMakeFiles/traffic.dir/src/RegistrationRequester.cpp.o[0m
+[1.068s] [ 25%] [32mBuilding CXX object CMakeFiles/police.dir/src/PoliceService.cpp.o[0m
+[1.068s] [ 41%] [32mBuilding CXX object CMakeFiles/traffic.dir/src/TrafficService.cpp.o[0m
+[1.069s] [ 41%] [32mBuilding CXX object CMakeFiles/police.dir/src/RegistrationRequester.cpp.o[0m
+[1.069s] [ 50%] [32mBuilding CXX object CMakeFiles/police.dir/src/PoliceRun.cpp.o[0m
+[1.071s] [ 58%] [32mBuilding CXX object CMakeFiles/test_police.dir/test/PoliceTest.cpp.o[0m
+[1.071s] [ 66%] [32mBuilding CXX object CMakeFiles/test_police.dir/src/RegistrationRequester.cpp.o[0m
+[1.072s] [ 75%] [32mBuilding CXX object CMakeFiles/test_police.dir/src/PoliceService.cpp.o[0m
+[7.386s] In file included from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.hpp:36[m[K,
+[7.386s]                  from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/PoliceService.hpp:1[m[K,
+[7.386s]                  from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/PoliceService.cpp:1[m[K:
+[7.386s] /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp: In instantiation of ‘[01m[Kvoid RSUService<MsgType>::signal_handler(int) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >][m[K’:
+[7.386s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:33:5:[m[K   required from ‘[01m[Kstatic void RSUService<MsgType>::static_signal_handler(int) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >][m[K’
+[7.386s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:25:14:[m[K   required from ‘[01m[KRSUService<MsgType>::RSUService(std::string, int, std::string) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>][m[K’
+[7.386s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/PoliceService.cpp:3:212:[m[K   required from here
+[7.386s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:40:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignal[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.387s]    40 | void RSUService<MsgType>::signal_handler([01;35m[Kint signal[m[K) {
+[7.387s]       |                                          [01;35m[K~~~~^~~~~~[m[K
+[7.486s] In file included from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.hpp:36[m[K,
+[7.486s]                  from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/PoliceService.hpp:1[m[K,
+[7.486s]                  from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/PoliceService.cpp:1[m[K:
+[7.487s] /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp: In instantiation of ‘[01m[Kvoid RSUService<MsgType>::signal_handler(int) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >][m[K’:
+[7.487s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:33:5:[m[K   required from ‘[01m[Kstatic void RSUService<MsgType>::static_signal_handler(int) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >][m[K’
+[7.487s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:25:14:[m[K   required from ‘[01m[KRSUService<MsgType>::RSUService(std::string, int, std::string) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>][m[K’
+[7.487s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/PoliceService.cpp:3:212:[m[K   required from here
+[7.487s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:40:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignal[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.487s]    40 | void RSUService<MsgType>::signal_handler([01;35m[Kint signal[m[K) {
+[7.488s]       |                                          [01;35m[K~~~~^~~~~~[m[K
+[9.037s] In file included from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.hpp:36[m[K,
+[9.038s]                  from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/TrafficService.hpp:1[m[K,
+[9.038s]                  from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/TrafficService.cpp:1[m[K:
+[9.038s] /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp: In instantiation of ‘[01m[Kvoid RSUService<MsgType>::signal_handler(int) [with MsgType = std_msgs::msg::String_<std::allocator<void> >][m[K’:
+[9.038s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:33:5:[m[K   required from ‘[01m[Kstatic void RSUService<MsgType>::static_signal_handler(int) [with MsgType = std_msgs::msg::String_<std::allocator<void> >][m[K’
+[9.038s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:25:14:[m[K   required from ‘[01m[KRSUService<MsgType>::RSUService(std::string, int, std::string) [with MsgType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>][m[K’
+[9.038s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/TrafficService.cpp:3:215:[m[K   required from here
+[9.038s] [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:40:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignal[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[9.038s]    40 | void RSUService<MsgType>::signal_handler([01;35m[Kint signal[m[K) {
+[9.038s]       |                                          [01;35m[K~~~~^~~~~~[m[K
+[10.623s] [ 83%] [32m[1mLinking CXX executable test_police[0m
+[10.626s] [ 91%] [32m[1mLinking CXX executable police[0m
+[10.934s] [ 91%] Built target police
+[11.124s] [ 91%] Built target test_police
+[11.186s] [100%] [32m[1mLinking CXX executable traffic[0m
+[11.431s] [100%] Built target traffic
+[11.450s] Invoked command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake --build /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub -- -j12 -l12
+[11.453s] Invoking command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake --install /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub
+[11.457s] -- Install configuration: ""
+[11.457s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/lib/cpp_pubsub/police
+[11.459s] -- Set non-toolchain portion of runtime path of "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/lib/cpp_pubsub/police" to ""
+[11.459s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/lib/cpp_pubsub/traffic
+[11.461s] -- Set non-toolchain portion of runtime path of "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/lib/cpp_pubsub/traffic" to ""
+[11.462s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/lib/cpp_pubsub/test_police
+[11.472s] -- Set non-toolchain portion of runtime path of "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/lib/cpp_pubsub/test_police" to ""
+[11.472s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[11.473s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[11.473s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[11.473s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[11.474s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[11.474s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[11.474s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[11.475s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[11.475s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[11.475s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[11.475s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[11.476s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[11.476s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[11.476s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[11.477s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[11.479s] Invoked command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake --install /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/cpp_pubsub

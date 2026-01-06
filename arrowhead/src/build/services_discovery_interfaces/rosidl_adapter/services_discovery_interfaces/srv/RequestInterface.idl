@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from services_discovery_interfaces/srv/RequestInterface.srv
+// generated code does not contain a copyright notice
+
+
+module services_discovery_interfaces {
+  module srv {
+    struct RequestInterface_Request {
+      sequence<string> services_to_look_for;
+
+      string json_base_configuration;
+    };
+    struct RequestInterface_Response {
+      sequence<string> services_found;
+    };
+  };
+};

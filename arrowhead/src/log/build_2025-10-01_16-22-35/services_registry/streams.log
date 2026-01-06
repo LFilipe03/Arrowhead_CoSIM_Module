@@ -1,0 +1,22 @@
+[0.020s] Invoking command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry': CMAKE_PREFIX_PATH=/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake --build /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry -- -j12 -l12
+[0.079s] [100%] Built target server
+[0.083s] Invoked command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake --build /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry -- -j12 -l12
+[0.089s] Invoking command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry': CMAKE_PREFIX_PATH=/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake --install /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry
+[0.094s] -- Install configuration: ""
+[0.094s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/lib/services_registry/server
+[0.094s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/ament_index/resource_index/package_run_dependencies/services_registry
+[0.094s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/ament_index/resource_index/parent_prefix_path/services_registry
+[0.094s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/environment/ament_prefix_path.sh
+[0.094s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/environment/ament_prefix_path.dsv
+[0.094s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/environment/path.sh
+[0.094s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/environment/path.dsv
+[0.095s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/local_setup.bash
+[0.095s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/local_setup.sh
+[0.095s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/local_setup.zsh
+[0.095s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/local_setup.dsv
+[0.095s] -- Installing: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/package.dsv
+[0.096s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/ament_index/resource_index/packages/services_registry
+[0.096s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/cmake/services_registryConfig.cmake
+[0.096s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/cmake/services_registryConfig-version.cmake
+[0.096s] -- Up-to-date: /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/package.xml
+[0.098s] Invoked command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake --install /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry

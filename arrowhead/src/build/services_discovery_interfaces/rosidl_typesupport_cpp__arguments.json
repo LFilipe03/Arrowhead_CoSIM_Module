@@ -1,0 +1,17 @@
+{
+  "package_name": "services_discovery_interfaces",
+  "output_dir": "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/rosidl_typesupport_cpp/services_discovery_interfaces",
+  "template_dir": "/opt/ros/galactic/share/rosidl_typesupport_cpp/resource",
+  "idl_tuples": [
+    "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/rosidl_adapter/services_discovery_interfaces:srv/RequestInterface.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/galactic/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp",
+    "/opt/ros/galactic/lib/python3.8/site-packages/rosidl_typesupport_cpp/__init__.py",
+    "/opt/ros/galactic/share/rosidl_typesupport_cpp/resource/action__type_support.cpp.em",
+    "/opt/ros/galactic/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/galactic/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/galactic/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em",
+    "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/rosidl_adapter/services_discovery_interfaces/srv/RequestInterface.idl"
+  ]
+}

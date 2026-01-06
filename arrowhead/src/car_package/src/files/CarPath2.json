@@ -1,0 +1,27 @@
+{
+  "totalDistance": 8.0,
+  "highwayEntrances": [
+
+    {
+      "highwayName": "A3",
+      "entranceNumber": 1,
+      "relativePosition": 0.7
+    },
+
+    {
+      "highwayName": "A2",
+      "entranceNumber": 9,
+      "relativePosition": 2.8
+    },
+
+    {
+      "highwayName": "A7",
+      "entranceNumber": 25,
+      "relativePosition": 5.75
+    }
+
+  ],
+  "distanceToLookForOthersRSUs": 1.0,
+  "vehicleName": "vehicle_2"
+}
+

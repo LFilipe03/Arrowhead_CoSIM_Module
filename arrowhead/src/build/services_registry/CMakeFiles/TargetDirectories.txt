@@ -1,0 +1,10 @@
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/uninstall.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/services_registry_uninstall.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/server.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/test.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/edit_cache.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/rebuild_cache.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/list_install_components.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/install.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/install/local.dir
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry/CMakeFiles/install/strip.dir

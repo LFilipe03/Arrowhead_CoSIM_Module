@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam component {
+  FontSize 15
+
+  BackgroundColor<<AutomatedSystem>> #F8F8FF
+  BackgroundColor<<Vehicle>> #FFFAF0
+  BackgroundColor<<RSU>> #FFFAF0
+  BackgroundColor<<Arrowhead>> #FFFAF0
+
+  BackgroundColor<<ROS2 Node>> #DCDCDC
+  
+  FontName Arial
+  BorderColor black
+  ArrowColor blue
+}
+
+component AutomatedSystem <<AutomatedSystem>>{
+
+    component Arrowhead <<Arrowhead>>{
+
+        port ArrowheadPort as " "
+
+    }
+
+    component Vehicle <<Vehicle>>{
+
+        port VehiclePort as " "
+
+    }
+
+    component RSU <<RSU>>{
+
+        port RSUPort as " "
+
+    }
+
+    circle ServiceRegistry_API
+
+    VehiclePort --( ServiceRegistry_API
+    RSUPort --( ServiceRegistry_API
+
+    ArrowheadPort -up- ServiceRegistry_API
+
+}
+
+@enduml

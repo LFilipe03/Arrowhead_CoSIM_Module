@@ -1,0 +1,25 @@
+{
+  "serviceValidation" : 72,
+  "serverAddrPort": "192.168.56.1:8443",
+  "serviceData":{
+    "interfaces": ["HTTP-INSECURE-JSON"],
+    "metadata": {
+      "highwayName": "A7",
+      "entranceNumber": 25
+    },
+    "providerSystem": {
+      "address": "1.1.1.1",
+      "authenticationInfo": "None",
+      "metadata": {
+        "highwayName": "A7",
+        "entranceNumber": 25
+      },
+      "port": 1,
+      "systemName": "RSU-1"
+    },
+    "secure": "NOT_SECURE",
+    "serviceDefinition": "Police-Information",
+    "serviceUri": "Police_Information_1",
+    "version": 1
+  }
+}

@@ -1,0 +1,109 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+package AutomatedSystem{
+
+    package ServicesRegistry{
+
+        class ServiceRegister{
+            +registerService()
+            +updateExpirationDay(serviceId)
+            +deleteService()
+        }
+
+        class RegistrationRequestReceiver <<ROS2 Server>>{
+            +analyzeRequest(request)
+        }
+
+        RegistrationRequestReceiver --> ServiceRegister
+
+    }
+
+package RSU{
+
+    struct RSUServiceconfiguration <<Configuration File>>{
+            serviceValidation
+            serverAddrPort
+            ServiceData
+    }
+
+    class RSUService{
+        -registrationRequester
+        -timerToKeepServiceAlive
+        -publisher
+        -service()
+
+        
+    }
+
+    class RegistrationRequester <<ROS2 Client>>{
+        -RSUServiceconfiguration
+        +getTopicName()
+        +requestROS2ServerForRegistration()
+        +requestROS2ServerForUpdate(serviceId)
+        +requestROS2ServerForElimination()
+    }
+
+    RegistrationRequester --> RSUServiceconfiguration
+    RSUService --> RegistrationRequester
+}
+
+package ServicesDiscovery{
+    class ServiceDiscovery{
+        +getTopicNamesOfCloseServices(servicesToFind)
+    }
+
+    class DiscoveryRequestReceiver <<ROS2 Server>>{
+        +respondToRequest(request)
+    }
+
+    DiscoveryRequestReceiver --> ServiceDiscovery
+
+}
+
+package Vehicle{
+
+    struct ConfigurationOfheMap <<Configuration File>>{
+        jsonOfMap
+    }
+
+    struct ConfigurationOfTheBaseQuery <<Configuration File>>{
+        jsonOfBaseQuery
+    }
+
+    class DiscoveryRequester <<ROS2 Client>>{
+        -baseConfiguration
+        +requestROS2ServerForServices(rsus)
+    }
+
+    class VehicleService{
+        -ConfigurationOfheMap
+        -discoveryRequester
+        -subscriptions
+        -totalDistance
+        -distanceToLookForOthersRSUs
+        -timerToUpdateCarPosition
+
+        -checkForNearRSUs()
+        -service()
+    }
+
+    class PoliceService{
+        -service()
+    }
+
+    class TrafficService{
+        -service()
+    }
+
+    TrafficService --|> VehicleService
+    PoliceService --|> VehicleService
+    VehicleService --> DiscoveryRequester
+    DiscoveryRequester --> ConfigurationOfTheBaseQuery
+    VehicleService --> ConfigurationOfheMap
+    }
+
+}
+
+@enduml

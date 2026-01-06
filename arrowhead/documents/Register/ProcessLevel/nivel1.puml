@@ -1,0 +1,32 @@
+@startuml
+
+skinparam participant {
+    BackgroundColor Black
+    BorderColor Black
+    FontColor White
+}
+
+skinparam sequence {
+    ArrowColor Black
+    LifeLineBorderColor Black
+    LifeLineBackgroundColor Black
+    LifeLineFontColor White
+    ArrowFontStyle Bold
+}
+
+box "AutomatedSystem" #F8F8FF
+    participant RSU
+    participant Arrowhead
+end box
+
+RSU -> Arrowhead: sends POST request to register the RSU service {Body: ServiceInformation}
+activate RSU
+activate Arrowhead
+
+Arrowhead --> RSU: sends 201 Created {Body: ServiceCreated}
+deactivate Arrowhead
+
+RSU -> RSU: starts the RSU service
+
+@enduml
+

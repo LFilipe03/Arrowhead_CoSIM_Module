@@ -1,0 +1,48 @@
+@startuml
+
+!pragma teoz true
+
+skinparam participant {
+    BackgroundColor Black
+    BorderColor Black
+    FontColor White
+}
+
+skinparam sequence {
+    ArrowColor Black
+    LifeLineBorderColor Black
+    LifeLineBackgroundColor Black
+    LifeLineFontColor White
+    ArrowFontStyle Bold
+}
+box "AutomatedSystem" #F8F8FF
+
+    box "Vehicle" #LightSeaGreen
+    participant VehicleServiceNode
+    participant ArrowheadCommunicaterDiscovery
+    end box
+
+    box "Arrowhead" #LightYellow
+    participant ServiceRegistry
+    end box
+
+end box
+
+activate VehicleServiceNode
+VehicleServiceNode -> ArrowheadCommunicaterDiscovery: requestForNextRSUsServices(ServicesLocation)
+
+activate ArrowheadCommunicaterDiscovery
+ArrowheadCommunicaterDiscovery -> ServiceRegistry: sends POST request for RSUs Services {Body: ServicesLocation}
+
+activate ServiceRegistry
+ServiceRegistry --> ArrowheadCommunicaterDiscovery: sends 200 OK with RSUs Services found {Body: ServicesFound}
+deactivate ServiceRegistry
+
+ArrowheadCommunicaterDiscovery -> ArrowheadCommunicaterDiscovery: fitersServicesTopicNames(ServicesFound)
+
+ArrowheadCommunicaterDiscovery --> VehicleServiceNode: sends Services Topic Names found
+deactivate ArrowheadCommunicaterDiscovery
+
+VehicleServiceNode -> VehicleServiceNode: subscribes to Services Topic Names found
+
+@enduml

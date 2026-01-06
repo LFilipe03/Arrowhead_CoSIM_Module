@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "services_registry_interfaces__py",
+		"source" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry_interfaces/services_registry_interfaces__py"
+	}
+}

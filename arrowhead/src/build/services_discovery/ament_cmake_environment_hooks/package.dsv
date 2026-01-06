@@ -1,0 +1,4 @@
+source;share/services_discovery/local_setup.bash
+source;share/services_discovery/local_setup.dsv
+source;share/services_discovery/local_setup.sh
+source;share/services_discovery/local_setup.zsh

@@ -1,0 +1,2 @@
+string[] services_to_look_for
+string json_base_configuration

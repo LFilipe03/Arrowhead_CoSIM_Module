@@ -1,0 +1,44 @@
+[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:8 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+In file included from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.hpp:36[m[K,
+                 from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/PoliceService.hpp:1[m[K,
+                 from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/PoliceService.cpp:1[m[K:
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp: In instantiation of ‘[01m[Kvoid RSUService<MsgType>::signal_handler(int) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >][m[K’:
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:33:5:[m[K   required from ‘[01m[Kstatic void RSUService<MsgType>::static_signal_handler(int) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >][m[K’
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:25:14:[m[K   required from ‘[01m[KRSUService<MsgType>::RSUService(std::string, int, std::string) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>][m[K’
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/PoliceService.cpp:3:212:[m[K   required from here
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:40:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignal[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   40 | void RSUService<MsgType>::signal_handler([01;35m[Kint signal[m[K) {
+      |                                          [01;35m[K~~~~^~~~~~[m[K
+In file included from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.hpp:36[m[K,
+                 from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/PoliceService.hpp:1[m[K,
+                 from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/PoliceService.cpp:1[m[K:
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp: In instantiation of ‘[01m[Kvoid RSUService<MsgType>::signal_handler(int) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >][m[K’:
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:33:5:[m[K   required from ‘[01m[Kstatic void RSUService<MsgType>::static_signal_handler(int) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >][m[K’
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:25:14:[m[K   required from ‘[01m[KRSUService<MsgType>::RSUService(std::string, int, std::string) [with MsgType = std_msgs::msg::Int32_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>][m[K’
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/PoliceService.cpp:3:212:[m[K   required from here
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:40:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignal[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   40 | void RSUService<MsgType>::signal_handler([01;35m[Kint signal[m[K) {
+      |                                          [01;35m[K~~~~^~~~~~[m[K
+In file included from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.hpp:36[m[K,
+                 from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/TrafficService.hpp:1[m[K,
+                 from [01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/TrafficService.cpp:1[m[K:
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp: In instantiation of ‘[01m[Kvoid RSUService<MsgType>::signal_handler(int) [with MsgType = std_msgs::msg::String_<std::allocator<void> >][m[K’:
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:33:5:[m[K   required from ‘[01m[Kstatic void RSUService<MsgType>::static_signal_handler(int) [with MsgType = std_msgs::msg::String_<std::allocator<void> >][m[K’
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:25:14:[m[K   required from ‘[01m[KRSUService<MsgType>::RSUService(std::string, int, std::string) [with MsgType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>][m[K’
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/TrafficService.cpp:3:215:[m[K   required from here
+[01m[K/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/cpp_pubsub/src/../include/cpp_pubsub/RSUService.tpp:40:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignal[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   40 | void RSUService<MsgType>::signal_handler([01;35m[Kint signal[m[K) {
+      |                                          [01;35m[K~~~~^~~~~~[m[K

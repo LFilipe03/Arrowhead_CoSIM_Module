@@ -1,0 +1,13 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/services_registry_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/services_registry_interfaces/srv/detail/registration_interface__type_support_c.cpp.o"
+  "CMakeFiles/services_registry_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/services_registry_interfaces/srv/detail/registration_interface__type_support_c.cpp.o.d"
+  "libservices_registry_interfaces__rosidl_typesupport_fastrtps_c.pdb"
+  "libservices_registry_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/services_registry_interfaces/srv/detail/registration_interface__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/services_registry_interfaces/srv/detail/registration_interface__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/services_registry_interfaces__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

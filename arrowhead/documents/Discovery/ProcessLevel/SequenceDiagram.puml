@@ -1,0 +1,32 @@
+@startuml
+
+skinparam participant {
+    BackgroundColor Black
+    BorderColor Black
+    FontColor White
+}
+
+skinparam sequence {
+    ArrowColor Black
+    LifeLineBorderColor Black
+    LifeLineBackgroundColor Black
+    LifeLineFontColor White
+    ArrowFontStyle Bold
+}
+
+box "AutomatedSystem" #F8F8FF
+participant Vehicle
+participant Arrowhead
+end box
+
+activate Vehicle
+Vehicle -> Arrowhead: sends POST request for RSUs Services {Body: ServicesLocation}
+activate Arrowhead
+
+Arrowhead --> Vehicle: sends 200 OK with RSUs Services found {Body: ServicesFound}
+deactivate Arrowhead
+
+Vehicle -> Vehicle: subscribes to Services Topic Names found
+
+@enduml
+

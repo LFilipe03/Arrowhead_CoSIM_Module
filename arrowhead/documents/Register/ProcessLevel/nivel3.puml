@@ -1,0 +1,75 @@
+@startuml
+
+!pragma teoz true
+
+skinparam participant {
+    BackgroundColor Black
+    BorderColor Black
+    FontColor White
+}
+
+skinparam sequence {
+    ArrowColor Black
+    LifeLineBorderColor Black
+    LifeLineBackgroundColor Black
+    LifeLineFontColor White
+    ArrowFontStyle Bold
+}
+
+box "AutomatedSystem" #F8F8FF
+
+    box "RSU" #LightSeaGreen
+
+        box "RSUServiceNode" #LightBlue
+            participant RSUService
+            participant RegistrationRequester
+        end box
+
+        box "ArrowheadCommunicaterRegister" #LightGreen
+            participant RegistrationRequesterReceiver
+            participant RegisterServicesClient
+        end box
+
+    end box
+
+    box "Arrowhead" #LightYellow
+    participant ServiceRegistry
+    end box
+
+end box
+
+activate RSUService
+RSUService -> RegistrationRequester: requestROS2ServerForRegistration()
+activate RegistrationRequester
+
+RegistrationRequester -> RegistrationRequesterReceiver: sends request to register a service
+activate RegistrationRequesterReceiver
+
+create RegisterServicesClient
+RegistrationRequesterReceiver -> RegisterServicesClient: creates(ServiceInformation)
+
+RegistrationRequesterReceiver -> RegisterServicesClient: registerService()
+activate RegisterServicesClient
+
+RegisterServicesClient -> ServiceRegistry: sends POST request to register the RSU service {Body: ServiceInformation}
+activate ServiceRegistry
+
+ServiceRegistry --> RegisterServicesClient: sends 201 Created with RSU Service created {Body: ServiceCreated}
+deactivate ServiceRegistry
+
+RegisterServicesClient -> RegisterServicesClient: filtersServiceID()
+
+RegisterServicesClient --> RegistrationRequesterReceiver: serviceID
+deactivate RegisterServicesClient
+
+RegistrationRequesterReceiver --> RegistrationRequester: sends the service ID
+deactivate RegistrationRequesterReceiver
+
+RegistrationRequester --> RSUService: serviceID
+deactivate RegistrationRequester
+
+RSUService -> RSUService: starts the RSU service
+
+
+@enduml
+

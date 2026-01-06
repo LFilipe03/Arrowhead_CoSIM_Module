@@ -1,0 +1,67 @@
+[0.015s] Invoking command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/services_registry -DCMAKE_INSTALL_PREFIX=/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry
+[0.088s] -- The C compiler identification is GNU 9.4.0
+[0.139s] -- The CXX compiler identification is GNU 9.4.0
+[0.156s] -- Detecting C compiler ABI info
+[0.219s] -- Detecting C compiler ABI info - done
+[0.227s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.227s] -- Detecting C compile features
+[0.228s] -- Detecting C compile features - done
+[0.239s] -- Detecting CXX compiler ABI info
+[0.306s] -- Detecting CXX compiler ABI info - done
+[0.315s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.316s] -- Detecting CXX compile features
+[0.316s] -- Detecting CXX compile features - done
+[0.319s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.325s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.325s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.325s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.325s]   the cmake_policy command to set the policy and suppress this warning.
+[0.325s] 
+[0.325s] Call Stack (most recent call first):
+[0.325s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.325s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.325s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.325s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.325s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.325s]   CMakeLists.txt:9 (find_package)
+[0.325s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.325s] [0m
+[0.341s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.342s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.406s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.453s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.459s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.546s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.577s] -- Found FastRTPS: /opt/ros/galactic/include  
+[0.644s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.689s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.692s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.706s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.707s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.766s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.766s] -- Looking for pthread_create in pthreads
+[0.811s] -- Looking for pthread_create in pthreads - not found
+[0.811s] -- Looking for pthread_create in pthread
+[0.865s] -- Looking for pthread_create in pthread - found
+[0.866s] -- Found Threads: TRUE  
+[0.977s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[0.977s]   By not providing "Findservices_registry_interfaces.cmake" in
+[0.977s]   CMAKE_MODULE_PATH this project has asked CMake to find a package
+[0.977s]   configuration file provided by "services_registry_interfaces", but CMake
+[0.977s]   did not find one.
+[0.977s] 
+[0.977s]   Could not find a package configuration file provided by
+[0.977s]   "services_registry_interfaces" with any of the following names:
+[0.977s] 
+[0.977s]     services_registry_interfacesConfig.cmake
+[0.977s]     services_registry_interfaces-config.cmake
+[0.977s] 
+[0.977s]   Add the installation prefix of "services_registry_interfaces" to
+[0.977s]   CMAKE_PREFIX_PATH or set "services_registry_interfaces_DIR" to a directory
+[0.978s]   containing one of the above files.  If "services_registry_interfaces"
+[0.978s]   provides a separate development package or SDK, be sure it has been
+[0.978s]   installed.
+[0.978s] 
+[0.978s] [0m
+[0.978s] -- Configuring incomplete, errors occurred!
+[0.983s] Invoked command in '/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /opt/cmake-3.28.1/bin/cmake /home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/services_registry -DCMAKE_INSTALL_PREFIX=/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry

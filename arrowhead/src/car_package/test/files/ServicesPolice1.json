@@ -1,0 +1,12 @@
+{
+    "serverAddrPort": "192.168.56.1:8443",
+    "serviceQueryData": {
+        "interfaceRequirements": [
+            "HTTP-INSECURE-JSON"
+        ],
+        "securityRequirements": [
+            "NOT_SECURE"
+        ],
+        "serviceDefinitionRequirement": "Police-Information"
+    }
+}

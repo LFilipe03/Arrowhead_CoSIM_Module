@@ -1,0 +1,177 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam component {
+  FontSize 15
+
+  BackgroundColor<<AutomatedSystem>> #F8F8FF
+  BackgroundColor<<Vehicle>> #FFFAF0
+  BackgroundColor<<RSU>> #FFFAF0
+  BackgroundColor<<Arrowhead>> #FFFAF0
+
+  BackgroundColor<<ROS2 Node>> #B0C4DE
+  
+  BackgroundColor<<HTTP Server>> #FFDAB9
+  BackgroundColor<<HTTP Client>> #FFDAB9
+
+  BackgroundColor<<ROS2 Server>> #EEE8AA
+  BackgroundColor<<ROS2 Client>> #EEE8AA
+
+  BackgroundColor<<Service>> #B0E0E6
+  
+  FontName Arial
+  BorderColor black
+  ArrowColor blue
+}
+
+component AutomatedSystem <<AutomatedSystem>>{
+
+    component Arrowhead <<Arrowhead>>{
+
+        port ArrowheadPort as " "
+
+        component ServiceRegistry <<HTTP Server>>{
+            port ServiceRegistryPort as " "
+
+            ServiceRegistryPort -- ArrowheadPort
+        }
+
+    }
+
+    component Vehicle <<Vehicle>>{
+
+        circle DRR_API
+
+        port VehiclePort as " "
+
+        component ArrowheadCommunicaterDiscover <<ROS2 Node>>{
+
+            circle DSC_API
+
+            port ArrowheadCommunicaterDiscoverPort as " "
+            port ArrowheadCommunicaterDiscoverPort2 as " "
+
+            ArrowheadCommunicaterDiscoverPort -up- VehiclePort
+
+            component DiscoveryServicesClient <<HTTP Client>>{
+                port DiscoveryServicesClientPort as " "
+                port DiscoveryServicesClientPort2 as " "
+
+                DiscoveryServicesClientPort -- ArrowheadCommunicaterDiscoverPort
+            }
+
+            component DiscoveryRequestReceiver <<ROS2 Server>>{
+                port DiscoveryRequestReceiverPort as " "
+                port DiscoveryRequestReceiverPort2 as " "
+                
+            }
+
+            DiscoveryRequestReceiverPort2 -down-( DSC_API
+            DSC_API -up- DiscoveryServicesClientPort2
+
+        }
+        component VehicleServiceNode <<ROS2 Node>>{
+
+            circle DR_API
+            port VehicleServicePort as " "
+
+            component DiscoveryRequester <<ROS2 Client>>{
+
+                port DiscoveryRequesterPort as " "  
+                port DiscoveryRequesterPort2 as " "  
+                
+                VehicleServicePort -- DiscoveryRequesterPort
+                VehicleServicePort -up-( DRR_API
+
+                ArrowheadCommunicaterDiscoverPort2 -- DiscoveryRequestReceiverPort
+                DRR_API -left- ArrowheadCommunicaterDiscoverPort2
+                
+            }
+
+            component VehicleService  <<Service>>{
+                port VehicleServiceNodePort as " "
+                
+            }
+
+            DiscoveryRequesterPort2 -up- DR_API
+            DR_API )-- VehicleServiceNodePort
+
+        }
+
+    }
+
+    component RSU <<RSU>>{
+
+        circle RRR_API
+
+        port RSUPort as " "
+
+        component RSUServiceNode <<ROS2 Node>>{
+
+            circle RR_API
+            port RSUServicePort as " "
+
+            component RegistrationRequester <<ROS2 Client>>{
+
+                port RegistrationRequesterPort as " "
+
+                RSUServicePort -- RegistrationRequesterPort
+                
+            }
+
+            component RSUService <<Service>>{
+                port RSUServiceNodePort as " "
+            }
+
+            RegistrationRequesterPort -up- RR_API
+            RR_API )-- RSUServiceNodePort
+
+        }
+
+        component ArrowheadCommunicaterRegister <<ROS2 Node>>{
+
+            circle RSC_API
+
+            port ArrowheadCommunicaterRegisterPort as " "
+            port ArrowheadCommunicaterRegisterPort2 as " "
+
+            ArrowheadCommunicaterRegisterPort -- RSUPort
+
+            component RegisterServicesClient <<HTTP Client>>{
+                port RegisterServicesClientPort as " "
+                port RegisterServicesClientPort2 as " "
+
+                RegisterServicesClientPort -- ArrowheadCommunicaterRegisterPort
+            }
+
+            component RegistrationRequestReceiver <<ROS2 Server>>{
+
+                port RegistrationRequestReceiverPort as " "
+                port RegistrationRequestReceiverPort2 as " "
+                
+                ArrowheadCommunicaterRegisterPort2 -- RegistrationRequestReceiverPort
+                
+            }
+
+            RegistrationRequestReceiverPort2 -down-( RSC_API
+            RSC_API -up- RegisterServicesClientPort2
+
+            ArrowheadCommunicaterRegisterPort2 -right- RRR_API
+            RSUServicePort -up-( RRR_API
+
+        }
+
+
+
+    }
+
+    circle ServiceRegistry_API
+
+    VehiclePort ---up---( ServiceRegistry_API
+    RSUPort --( ServiceRegistry_API
+
+    ArrowheadPort -up- ServiceRegistry_API
+
+}
+
+@enduml

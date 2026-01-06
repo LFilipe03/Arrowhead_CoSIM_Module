@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-106e94d02071505f7bda.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "car_package",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "car_package_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-car_package_uninstall-fc494f7a9e0659b56d50.json",
+					"name" : "car_package_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "police::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-police-a64ed530369e656ec05f.json",
+					"name" : "police",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulation-8ed0ef3c1d9d1e8ce7b9.json",
+					"name" : "simulation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_police::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_police-74d69bf7a0d294e231e9.json",
+					"name" : "test_police",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traffic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traffic-98ebcbbb46ce944d2c0a.json",
+					"name" : "traffic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-cead662d8f8299f0d8cd.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/car_package",
+		"source" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/car_package"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

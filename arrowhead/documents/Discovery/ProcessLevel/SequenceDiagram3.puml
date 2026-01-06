@@ -1,0 +1,74 @@
+@startuml
+
+!pragma teoz true
+
+skinparam participant {
+    BackgroundColor Black
+    BorderColor Black
+    FontColor White
+}
+
+skinparam sequence {
+    ArrowColor Black
+    LifeLineBorderColor Black
+    LifeLineBackgroundColor Black
+    LifeLineFontColor White
+    ArrowFontStyle Bold
+    
+}
+
+box "AutomatedSystem" #F8F8FF
+
+    box "Vehicle" #LightSeaGreen
+
+        box "VehicleServiceNode" #LightBlue
+        participant VehicleService
+        participant DiscoveryRequester
+        end box
+
+        box "ArrowheadCommunicaterDiscoveryNode" #LightGreen
+        participant DiscoveryRequestReceiver
+        participant DiscoveryServicesClient
+        end box
+
+    end box
+
+    box "Arrowhead" #LightYellow
+    participant ServiceRegistry
+    end box
+
+end box
+
+activate VehicleService
+
+VehicleService -> DiscoveryRequester: requestForNextRSUsServices(ServicesLocation)
+activate DiscoveryRequester
+
+DiscoveryRequester -> DiscoveryRequestReceiver: sends request {Body: ServicesLocation}
+activate DiscoveryRequestReceiver
+
+create DiscoveryServicesClient
+DiscoveryRequestReceiver -> DiscoveryServicesClient: creates(SearchInformation)
+
+DiscoveryRequestReceiver -> DiscoveryServicesClient: obtainServicesTopicNames(ServicesLocation)
+activate DiscoveryServicesClient
+
+DiscoveryServicesClient -> ServiceRegistry: sends POST request for RSUs Services {Body: ServicesLocation}
+activate ServiceRegistry
+
+ServiceRegistry --> DiscoveryServicesClient: sends 200 OK with RSUs Services found {Body: ServicesFound}
+deactivate ServiceRegistry
+
+DiscoveryServicesClient -> DiscoveryServicesClient: fitersServicesTopicNames(ServicesFound)
+DiscoveryServicesClient --> DiscoveryRequestReceiver: servicesTopicNames
+deactivate DiscoveryServicesClient
+
+DiscoveryRequestReceiver --> DiscoveryRequester: sends services Topic Names found
+deactivate DiscoveryRequestReceiver
+
+DiscoveryRequester --> VehicleService: servicesTopicNames
+deactivate DiscoveryRequester
+
+VehicleService -> VehicleService: subscribes to Services Topic Names found
+
+@enduml

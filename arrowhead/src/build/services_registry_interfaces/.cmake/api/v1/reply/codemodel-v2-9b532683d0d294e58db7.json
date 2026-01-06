@@ -1,0 +1,215 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-ffcaff7acf3e60f577c3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				},
+				{
+					"build" : "services_registry_interfaces__py",
+					"jsonFile" : "directory-services_registry_interfaces__py-822576f16d4b2ccd99c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry_interfaces/services_registry_interfaces__py",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "services_registry_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces-79b814657f5798f6c131.json",
+					"name" : "services_registry_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__cpp-7db0f6bbf70195b46963.json",
+					"name" : "services_registry_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "services_registry_interfaces__py::@b2796ed75aeff2d2cf6a",
+					"jsonFile" : "target-services_registry_interfaces__py-1649f72d8f111258dd42.json",
+					"name" : "services_registry_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__python::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__python-6f6fc6ee1ec4decb60e3.json",
+					"name" : "services_registry_interfaces__python",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_generator_c-739cc90d418f2f57862b.json",
+					"name" : "services_registry_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_c-8f2f12b24e2f1f3466a8.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_c__pyext-ba1a5961982ed308b422.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_cpp-99f86d52eea8bc407e96.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_fastrtps_c-6a746090e718aaa285cf.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_fastrtps_c__pyext-edf95927c336ea051cf1.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_fastrtps_cpp-2f12969a007b37913bd7.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_introspection_c-d28a0a5bdc60c6d65a62.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_introspection_c__pyext-4716839829d4b0c9c291.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces__rosidl_typesupport_introspection_cpp-abdf6e1dbed13451ff29.json",
+					"name" : "services_registry_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "services_registry_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-services_registry_interfaces_uninstall-90c0a8fa9678502ee662.json",
+					"name" : "services_registry_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-78c4a60b5e62f7cbd0e2.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_registry_interfaces",
+		"source" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/services_registry_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,671 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "libservices_discovery_interfaces__rosidl_typesupport_fastrtps_cpp.so"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"ament_execute_extensions",
+			"rosidl_generate_interfaces",
+			"install",
+			"target_link_libraries",
+			"ament_target_dependencies",
+			"set_target_properties",
+			"find_package",
+			"add_dependencies",
+			"add_compile_options",
+			"add_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"/opt/ros/galactic/share/rosidl_typesupport_fastrtps_cpp/cmake/rosidl_typesupport_fastrtps_cpp_generate_interfaces.cmake",
+			"/opt/ros/galactic/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake",
+			"CMakeLists.txt",
+			"/opt/ros/galactic/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake",
+			"/opt/ros/galactic/share/rmw/cmake/rmwExport.cmake",
+			"/opt/ros/galactic/share/rmw/cmake/ament_cmake_export_targets-extras.cmake",
+			"/opt/ros/galactic/share/rmw/cmake/rmwConfig.cmake",
+			"/opt/ros/galactic/share/rosidl_typesupport_fastrtps_c/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/galactic/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_cConfig.cmake",
+			"/opt/ros/galactic/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake",
+			"/opt/ros/galactic/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake",
+			"/opt/ros/galactic/share/rosidl_default_runtime/cmake/rosidl_default_runtime-extras.cmake",
+			"/opt/ros/galactic/share/rosidl_default_runtime/cmake/rosidl_default_runtimeConfig.cmake",
+			"/opt/ros/galactic/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/galactic/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake",
+			"/opt/ros/galactic/share/rcl_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/galactic/share/rcl_interfaces/cmake/rcl_interfacesConfig.cmake",
+			"/opt/ros/galactic/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/galactic/share/rcl/cmake/rclConfig.cmake",
+			"/opt/ros/galactic/share/libstatistics_collector/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/galactic/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake",
+			"/opt/ros/galactic/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/galactic/share/rclcpp/cmake/rclcppConfig.cmake",
+			"/opt/ros/galactic/share/fastrtps/cmake/fastrtps-dynamic-targets.cmake",
+			"/opt/ros/galactic/share/fastrtps/cmake/fastrtps-config.cmake",
+			"/opt/ros/galactic/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c-extras.cmake",
+			"/opt/ros/galactic/share/ament_cmake_ros/cmake/ament_cmake_ros-extras.cmake",
+			"/opt/ros/galactic/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake",
+			"/opt/ros/galactic/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 286,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 185,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 143,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 145,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 158,
+				"parent" : 4
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"file" : 23,
+				"parent" : 10
+			},
+			{
+				"command" : 1,
+				"file" : 23,
+				"line" : 41,
+				"parent" : 11
+			},
+			{
+				"file" : 22,
+				"parent" : 12
+			},
+			{
+				"command" : 8,
+				"file" : 22,
+				"line" : 21,
+				"parent" : 13
+			},
+			{
+				"file" : 21,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 21,
+				"line" : 41,
+				"parent" : 15
+			},
+			{
+				"file" : 20,
+				"parent" : 16
+			},
+			{
+				"command" : 8,
+				"file" : 20,
+				"line" : 21,
+				"parent" : 17
+			},
+			{
+				"file" : 19,
+				"parent" : 18
+			},
+			{
+				"command" : 1,
+				"file" : 19,
+				"line" : 41,
+				"parent" : 19
+			},
+			{
+				"file" : 18,
+				"parent" : 20
+			},
+			{
+				"command" : 8,
+				"file" : 18,
+				"line" : 21,
+				"parent" : 21
+			},
+			{
+				"file" : 17,
+				"parent" : 22
+			},
+			{
+				"command" : 1,
+				"file" : 17,
+				"line" : 41,
+				"parent" : 23
+			},
+			{
+				"file" : 16,
+				"parent" : 24
+			},
+			{
+				"command" : 8,
+				"file" : 16,
+				"line" : 21,
+				"parent" : 25
+			},
+			{
+				"file" : 15,
+				"parent" : 26
+			},
+			{
+				"command" : 1,
+				"file" : 15,
+				"line" : 41,
+				"parent" : 27
+			},
+			{
+				"file" : 14,
+				"parent" : 28
+			},
+			{
+				"command" : 8,
+				"file" : 14,
+				"line" : 21,
+				"parent" : 29
+			},
+			{
+				"file" : 13,
+				"parent" : 30
+			},
+			{
+				"command" : 1,
+				"file" : 13,
+				"line" : 41,
+				"parent" : 31
+			},
+			{
+				"file" : 12,
+				"parent" : 32
+			},
+			{
+				"command" : 8,
+				"file" : 12,
+				"line" : 12,
+				"parent" : 33
+			},
+			{
+				"file" : 11,
+				"parent" : 34
+			},
+			{
+				"command" : 1,
+				"file" : 11,
+				"line" : 41,
+				"parent" : 35
+			},
+			{
+				"file" : 10,
+				"parent" : 36
+			},
+			{
+				"command" : 8,
+				"file" : 10,
+				"line" : 13,
+				"parent" : 37
+			},
+			{
+				"file" : 9,
+				"parent" : 38
+			},
+			{
+				"command" : 1,
+				"file" : 9,
+				"line" : 41,
+				"parent" : 39
+			},
+			{
+				"file" : 8,
+				"parent" : 40
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 21,
+				"parent" : 41
+			},
+			{
+				"file" : 7,
+				"parent" : 42
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 41,
+				"parent" : 43
+			},
+			{
+				"file" : 6,
+				"parent" : 44
+			},
+			{
+				"command" : 1,
+				"file" : 6,
+				"line" : 9,
+				"parent" : 45
+			},
+			{
+				"file" : 5,
+				"parent" : 46
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 56,
+				"parent" : 47
+			},
+			{
+				"command" : 1,
+				"file" : 9,
+				"line" : 41,
+				"parent" : 39
+			},
+			{
+				"file" : 26,
+				"parent" : 49
+			},
+			{
+				"command" : 8,
+				"file" : 26,
+				"line" : 6,
+				"parent" : 50
+			},
+			{
+				"file" : 25,
+				"parent" : 51
+			},
+			{
+				"command" : 1,
+				"file" : 25,
+				"line" : 60,
+				"parent" : 52
+			},
+			{
+				"file" : 24,
+				"parent" : 53
+			},
+			{
+				"command" : 7,
+				"file" : 24,
+				"line" : 56,
+				"parent" : 54
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 4
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 29,
+				"parent" : 58
+			},
+			{
+				"command" : 8,
+				"file" : 29,
+				"line" : 15,
+				"parent" : 59
+			},
+			{
+				"file" : 28,
+				"parent" : 60
+			},
+			{
+				"command" : 1,
+				"file" : 28,
+				"line" : 41,
+				"parent" : 61
+			},
+			{
+				"file" : 27,
+				"parent" : 62
+			},
+			{
+				"command" : 11,
+				"file" : 27,
+				"line" : 25,
+				"parent" : 63
+			},
+			{
+				"command" : 12,
+				"file" : 0,
+				"line" : 137,
+				"parent" : 4
+			},
+			{
+				"command" : 12,
+				"file" : 4,
+				"line" : 141,
+				"parent" : 7
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=gnu++14 -fPIC"
+				},
+				{
+					"fragment" : "-Wall -Wextra -Wpedantic"
+				},
+				{
+					"backtrace" : 57,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 57,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 57,
+					"fragment" : "-Wpedantic"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "FOONATHAN_MEMORY=1"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "FOONATHAN_MEMORY_VERSION_MAJOR=0"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "FOONATHAN_MEMORY_VERSION_MINOR=7"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "FOONATHAN_MEMORY_VERSION_PATCH=1"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "RCUTILS_ENABLE_FAULT_INJECTION"
+				},
+				{
+					"backtrace" : 64,
+					"define" : "ROS_PACKAGE_NAME=\"services_discovery_interfaces\""
+				},
+				{
+					"define" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_cpp_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 65,
+					"path" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/rosidl_generator_cpp"
+				},
+				{
+					"backtrace" : 65,
+					"path" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/rosidl_typesupport_fastrtps_cpp"
+				},
+				{
+					"backtrace" : 66,
+					"isSystem" : true,
+					"path" : "/opt/ros/galactic/include"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "/opt/ros/galactic/include/foonathan_memory"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					9
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 56,
+			"id" : "services_discovery_interfaces__cpp::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 6,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 6,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_discovery_interfaces"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/opt/ros/galactic/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "/opt/ros/galactic/lib/librmw.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "/opt/ros/galactic/lib/librosidl_runtime_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "/opt/ros/galactic/lib/librosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "/opt/ros/galactic/lib/libfastrtps.so.2.3.6",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "/opt/ros/galactic/lib/libfastcdr.so.1.0.20",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 48,
+				"fragment" : "/opt/ros/galactic/lib/librcutils.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "/opt/ros/galactic/lib/libfoonathan_memory-0.7.1.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libtinyxml2.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libtinyxml2.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libssl.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libcrypto.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "services_discovery_interfaces__rosidl_typesupport_fastrtps_cpp",
+	"nameOnDisk" : "libservices_discovery_interfaces__rosidl_typesupport_fastrtps_cpp.so",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/rosidl_typesupport_fastrtps_cpp/services_discovery_interfaces/srv/detail/dds_fastrtps/request_interface__type_support.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"isGenerated" : true,
+			"path" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/rosidl_typesupport_fastrtps_cpp/services_discovery_interfaces/srv/detail/request_interface__rosidl_typesupport_fastrtps_cpp.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/build/services_discovery_interfaces/rosidl_typesupport_fastrtps_cpp/services_discovery_interfaces/srv/detail/dds_fastrtps/request_interface__type_support.cpp.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

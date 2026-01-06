@@ -1,0 +1,4 @@
+srv/RegistrationInterface.idl
+srv/RegistrationInterface.srv
+srv/RegistrationInterface_Request.msg
+srv/RegistrationInterface_Response.msg

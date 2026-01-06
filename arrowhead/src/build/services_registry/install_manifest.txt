@@ -1,0 +1,16 @@
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/lib/services_registry/server
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/ament_index/resource_index/package_run_dependencies/services_registry
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/ament_index/resource_index/parent_prefix_path/services_registry
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/environment/ament_prefix_path.sh
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/environment/ament_prefix_path.dsv
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/environment/path.sh
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/environment/path.dsv
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/local_setup.bash
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/local_setup.sh
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/local_setup.zsh
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/local_setup.dsv
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/package.dsv
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/ament_index/resource_index/packages/services_registry
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/cmake/services_registryConfig.cmake
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/cmake/services_registryConfig-version.cmake
+/home/filipe/Desktop/Arrowhead_Integration_Module/arrowhead/src/install/services_registry/share/services_registry/package.xml

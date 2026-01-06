@@ -1,0 +1,97 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam component {
+  FontSize 15
+
+  BackgroundColor<<AutomatedSystem>> #F8F8FF
+  BackgroundColor<<Vehicle>> #FFFAF0
+  BackgroundColor<<RSU>> #FFFAF0
+  BackgroundColor<<Arrowhead>> #FFFAF0
+  BackgroundColor<<HTTP Server>> #FFDAB9
+
+  BackgroundColor<<ROS2 Node>> #B0C4DE
+  
+  FontName Arial
+  BorderColor black
+  ArrowColor blue
+}
+
+component AutomatedSystem <<AutomatedSystem>>{
+
+    component Arrowhead <<Arrowhead>>{
+
+        port ArrowheadPort as " "
+
+        component ServiceRegistry <<HTTP Server>>{
+            port ServiceRegistryPort as " "
+
+            ServiceRegistryPort -- ArrowheadPort
+        }
+
+    }
+
+    component Vehicle <<Vehicle>>{
+
+        circle DRR_API
+
+        port VehiclePort as " "
+
+        component ArrowheadCommunicaterDiscover <<ROS2 Node>>{
+
+
+            port ArrowheadCommunicaterDiscoverPort as " "
+            port ArrowheadCommunicaterDiscoverPort2 as " "
+
+            ArrowheadCommunicaterDiscoverPort -up- VehiclePort
+
+        }
+        component VehicleServiceNode <<ROS2 Node>>{
+
+            port VehicleServicePort as " "
+
+            VehicleServicePort --( DRR_API
+            DRR_API -left- ArrowheadCommunicaterDiscoverPort2
+
+        }
+
+    }
+
+    component RSU <<RSU>>{
+
+        circle RRR_API
+
+        port RSUPort as " "
+
+        component RSUServiceNode <<ROS2 Node>>{
+
+            port RSUServicePort as " "
+
+        }
+
+        component ArrowheadCommunicaterRegister <<ROS2 Node>>{
+
+            port ArrowheadCommunicaterRegisterPort as " "
+            port ArrowheadCommunicaterRegisterPort2 as " "
+
+            ArrowheadCommunicaterRegisterPort -- RSUPort
+
+            ArrowheadCommunicaterRegisterPort2 -up- RRR_API
+            RSUServicePort -up-( RRR_API
+
+        }
+
+
+
+    }
+
+    circle ServiceRegistry_API
+
+    VehiclePort --( ServiceRegistry_API
+    RSUPort --( ServiceRegistry_API
+
+    ArrowheadPort -up- ServiceRegistry_API
+
+}
+
+@enduml

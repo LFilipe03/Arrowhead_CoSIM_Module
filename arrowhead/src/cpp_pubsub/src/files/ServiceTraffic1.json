@@ -1,0 +1,25 @@
+{
+  "serviceValidation" : 96,
+  "serverAddrPort": "192.168.1.225:8443",
+  "serviceData":{
+    "interfaces": ["HTTP-INSECURE-JSON"],
+    "metadata": {
+      "highwayName": "A3",
+      "entranceNumber": 1
+    },
+    "providerSystem": {
+      "address": "1.1.1.1",
+      "authenticationInfo": "None",
+      "metadata": {
+        "highwayName": "A3",
+        "entranceNumber": 1
+      },
+      "port": 1,
+      "systemName": "RSU-1"
+    },
+    "secure": "NOT_SECURE",
+    "serviceDefinition": "Traffic-Information",
+    "serviceUri": "Traffic_Information_1",
+    "version": 1
+  }
+}

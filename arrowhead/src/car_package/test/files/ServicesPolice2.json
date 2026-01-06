@@ -1,0 +1,11 @@
+{
+    "serviceQueryData": {
+        "interfaceRequirements": [
+            "HTTP-INSECURE-JSON"
+        ],
+        "securityRequirements": [
+            "NOT_SECURE"
+        ],
+        "serviceDefinitionRequirement": "Police-Information"
+    }
+}
