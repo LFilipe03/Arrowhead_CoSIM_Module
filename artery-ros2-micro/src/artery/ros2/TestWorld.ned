@@ -5,7 +5,7 @@ import inet.environment.contract.IPhysicalEnvironment;
 import inet.physicallayer.contract.packetlevel.IRadioMedium;
 import ros2.Connector;
 
-network World
+network TestWorld
 {
     parameters:
         bool withPhysicalEnvironment = default(false);
@@ -40,9 +40,10 @@ network World
                 mobility.initFromDisplayString = false;
         }
 
-        arrowheadRobot: Robot {
+        arrowheadRobot: ArrowheadRobot {
             parameters:
                 @display("p=200,200;i=block/robot");
                 
         }
+        
 }

@@ -1,8 +1,10 @@
-#ifndef ARTERY_ARROWHEADROBOTINETMOBILITY_H_T7FXXEAE
-#define ARTERY_ARROWHEADROBOTINETMOBILITY_H_T7FXXEAE
+#ifndef ARTERY_ROS2_ARROWHEADROBOTINETMOBILITY_H_9C4E2B
+#define ARTERY_ROS2_ARROWHEADROBOTINETMOBILITY_H_9C4E2B
 
 #include "artery/utility/Geometry.h"
 #include "ros2/RobotSink.h"
+#include "ros2/ServiceSink.h"
+#include "ros2/ServiceObject.h"
 #include <inet/mobility/contract/IMobility.h>
 #include <omnetpp/csimplemodule.h>
 
@@ -11,6 +13,7 @@
 #include <etsi_its_msgs/msg/cam.hpp>
 #include <micro_its_msgs/msg/cam.hpp>
 #include <arrowhead_msgs/msg/service_registration.hpp>
+
 
 #include <ros2/Ros2Node.h>
 
@@ -23,7 +26,7 @@ namespace artery
 {
 
 class ArrowheadRobotInetMobility :
-    public inet::IMobility, public ros2::RobotSink,
+    public inet::IMobility, public ros2::RobotSink, public ros2::ServiceSink,
     public omnetpp::cSimpleModule
 {
 public:
@@ -46,6 +49,10 @@ public:
     void initialize(const ros2::RobotObject&) override;
     void update(const ros2::RobotObject&) override;
 
+    // ros2::ServiceSink
+    void initialize(const ros2::ServiceObject&) override;
+ 
+
     const ros2::RobotObject& getLastRobotObject() const { return mLastRobotObject; }
     const ros2::RobotObject& getLastSimulationRobotObject() const { return mLastSimulationRobotObject; }
     Position getSimulationPosition() const;
@@ -62,6 +69,7 @@ protected:
 
 private:
     ros2::RobotObject mLastRobotObject;
+    ros2::ServiceObject mLastServiceObject;
     ros2::RobotObject mLastSimulationRobotObject;
     inet::Coord mSimulationPosition;
     inet::Coord mPosition;
@@ -75,7 +83,7 @@ private:
     Ros2Node rosNode;
     rclcpp::Subscription<etsi_its_msgs::msg::CAM>::SharedPtr localizationSub;
     rclcpp::Subscription<micro_its_msgs::msg::CAM>::SharedPtr simulationSub;
-    rclcpp::Subscription<>::SharedPtr arrowheadSub;
+    rclcpp::Subscription<arrowhead_msgs::msg::ServiceRegistration>::SharedPtr arrowheadserviceregistrySub;
     void localization_callback(const etsi_its_msgs::msg::CAM::SharedPtr);
     void simulation_callback(const micro_its_msgs::msg::CAM::SharedPtr);
     void arrowhead_callback(const arrowhead_msgs::msg::ServiceRegistration::SharedPtr);
@@ -83,4 +91,4 @@ private:
 
 } // namespace artery
 
-#endif /* ARTERY_ARROWHEADROBOTINETMOBILITY_H_T7FXXEAE */
+#endif /* ARTERY_ROS2_ARROWHEADROBOTINETMOBILITY_H_9C4E2B */

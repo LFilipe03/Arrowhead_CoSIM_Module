@@ -42,6 +42,23 @@ int ArrowheadRobotInetMobility::numInitStages() const
 void ArrowheadRobotInetMobility::initialize(int stage)
 {
     if (stage == inet::INITSTAGE_LOCAL) {
+
+        mSimulationPosition = inet::Coord(0, 0, 0);
+        mPosition = inet::Coord(0, 0, 0);
+        mSpeed = inet::Coord(0, 0, 0);
+
+        mOrientation.alpha = 0;
+        mYawRate.alpha = 0;
+
+        ros2::RobotObject robot;
+        robot.setHeading(0);
+        robot.setSpeed(0);
+        robot.setYawRate(0);
+        robot.setPosition({0,0,0});
+        mLastRobotObject = robot;
+        robot.setId("ArrowheadRobot");
+        mLastSimulationRobotObject = robot;
+
         mVisualRepresentation = inet::getModuleFromPar<cModule>(par("visualRepresentation"), this, false);
         mCoordinateSystem = inet::getModuleFromPar<inet::IGeographicCoordinateSystem>(par("coordinateSystemModule"), this);
         omnetpp::createWatch("position", mPosition);
@@ -51,7 +68,7 @@ void ArrowheadRobotInetMobility::initialize(int stage)
         omnetpp::createWatch("ROBOT ID", mLastRobotObject.getId());
         localizationSub = rosNode.getRosNode()->create_subscription<etsi_its_msgs::msg::CAM>(mLastRobotObject.getId()+"/cam_out",1,std::bind(&ArrowheadRobotInetMobility::localization_callback,this,std::placeholders::_1));
         simulationSub = rosNode.getRosNode()->create_subscription<micro_its_msgs::msg::CAM>(mLastRobotObject.getId()+"/simulation_pose",1,std::bind(&ArrowheadRobotInetMobility::simulation_callback,this,std::placeholders::_1));
-        arrowheadserviceregistrySub = rosNode.getRosNode()->create_subscription<arrowhead_msgs::msg::ArrowheadServiceRegistryMsg>(mLastRobotObject.getId()+"/Arrowhead_Service_Registry",1,std::bind(&ArrowheadRobotInetMobility::arrowhead_service_registry_callback,this,std::placeholders::_1));
+        arrowheadserviceregistrySub = rosNode.getRosNode()->create_subscription<arrowhead_msgs::msg::ServiceRegistration>(mLastRobotObject.getId()+"/Arrowhead_Service_Registry",1,std::bind(&ArrowheadRobotInetMobility::arrowhead_callback,this,std::placeholders::_1));
     } else if (stage == inet::INITSTAGE_PHYSICAL_ENVIRONMENT_2) {
         if (mVisualRepresentation) {
             auto target = mVisualRepresentation->getParentModule();
@@ -107,23 +124,30 @@ void ArrowheadRobotInetMobility::simulation_callback(const micro_its_msgs::msg::
     update(robot);
 }
 
-void ArrowheadRobotInetMobility::arrowhead_service_registry_callback(const arrowhead_msgs::msg::ServiceRegistration::SharedPtr msg)
+void ArrowheadRobotInetMobility::arrowhead_callback(const arrowhead_msgs::msg::ServiceRegistration::SharedPtr msg)
 {
     ros2::ServiceObject service;
 
     service.setServiceValidation(msg->service_validation);
     service.setServerAddrPort(msg->server_addrport);
-    service.setServiceDefinition(msg->service_definition);
-    service.setServiceUri(msg->service_uri);
-    service.setVersion(msg->version);
-    service.setSecure(msg->secure);
-    service.setInterfaces(msg->interfaces);
-    service.setHighwayName(msg->highway_name);
-    service.setEntranceNumber(msg->entrance_number);
-    service.setSystemName(msg->system_name);
-    service.setAddress(msg->address);
-    service.setPort(msg->port);
-    service.setAuthenticationInfo(msg->authentication_info);
+
+    // ServiceData
+    service.setServiceDefinition(msg->service_data.service_definition);
+    service.setServiceURI(msg->service_data.service_uri);
+    service.setVersion(msg->service_data.version);
+    service.setSecure(msg->service_data.secure);
+    service.setInterfaces(msg->service_data.interfaces);
+
+    // Metadata
+    service.setHighwayName(msg->service_data.metadata.highway_name);
+    service.setEntranceNumber(msg->service_data.metadata.entrance_number);
+
+    // ProviderSystem
+    service.setSystemName(msg->service_data.provider_system.system_name);
+    service.setAddress(msg->service_data.provider_system.address);
+    service.setPort(msg->service_data.provider_system.port);
+    service.setAuthenticationInfo(
+        msg->service_data.provider_system.authentication_info);
 
     mLastServiceObject = service;
 
@@ -175,11 +199,19 @@ void ArrowheadRobotInetMobility::initialize(const ros2::RobotObject& robot)
 void ArrowheadRobotInetMobility::update(const ros2::RobotObject& robot)
 {
     setInetProperties(robot);
-    copyable as a base class, because then you don't need to write a copy constructor, assignment operator, and dup() function, spaemit(inet::IMobility::mobilityStateChangedSignal, this);
+    //copyable as a base class, because then you don't need to write a copy constructor, assignment operator, and dup() function, spaemit(inet::IMobility::mobilityStateChangedSignal, this);
     emit(simulationPositionChangedSignal, &robot);
     updateVisualRepresentation();
     mLastSimulationRobotObject = robot;
 }
+
+void ArrowheadRobotInetMobility::initialize(const ros2::ServiceObject& service)
+{
+    mLastServiceObject = service;
+}
+
+
+
 
 void ArrowheadRobotInetMobility::setInetProperties(const ros2::RobotObject& robot)
 {

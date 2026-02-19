@@ -149,6 +149,9 @@ set_property(TARGET core APPEND PROPERTY SOURCES
     ros2/RobotMiddleware.cc
     ros2/RobotPositionProvider.cc
     ros2/RobotInetMobility.cc
+    ros2/ArrowheadRobotInetMobility.cc
+    ros2/ArrowheadRobotPositionProvider.cc
+    ros2/ArrowheadRobotMiddleware.cc
 )
 target_link_libraries(core PUBLIC ros2)
 

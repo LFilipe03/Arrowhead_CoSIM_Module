@@ -9,6 +9,7 @@ simple ArrowheadRobotInetMobility like IMobility
         @signal[robotPositionChanged](type=ros2::RobotObject);
         @signal[localizationPositionChanged](type=ros2::RobotObject);
         @signal[simulationPositionChanged](type=ros2::RobotObject);
+        @signal[serviceRegistryUpdated](type=ros2::ServiceObject);
         string visualRepresentation = default("");
         string coordinateSystemModule = default("coordinateSystem");
 }

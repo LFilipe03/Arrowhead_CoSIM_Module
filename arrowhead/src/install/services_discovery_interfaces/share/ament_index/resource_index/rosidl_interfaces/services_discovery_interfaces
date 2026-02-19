@@ -1,4 +1,0 @@
-srv/RequestInterface.idl
-srv/RequestInterface.srv
-srv/RequestInterface_Request.msg
-srv/RequestInterface_Response.msg

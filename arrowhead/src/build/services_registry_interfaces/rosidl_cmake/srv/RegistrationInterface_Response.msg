@@ -1,2 +1,0 @@
-
-int32 value_returned

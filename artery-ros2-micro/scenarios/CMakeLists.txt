@@ -43,6 +43,8 @@ add_opp_run(ros2_coexistance WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ros2-
 
 add_opp_run(ros2_highway_merge WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ros2-highway-merge)
 
+add_opp_run(ros2-arrowhead-test WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ros2-arrowhead-test)
+ 
  
 add_opp_run(car2car-grid WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/car2car-grid)
 add_opp_test(car2car-grid SUFFIX cam_bsp CONFIG cam_bsp RUN 0 SIMTIME_LIMIT 30s)

@@ -1,3 +1,0 @@
-string registration_data_json
-int32 service_id_with_update
-string method

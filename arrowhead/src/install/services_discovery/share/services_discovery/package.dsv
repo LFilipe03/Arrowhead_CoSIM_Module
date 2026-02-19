@@ -1,8 +1,0 @@
-source;share/services_discovery/hook/cmake_prefix_path.ps1
-source;share/services_discovery/hook/cmake_prefix_path.dsv
-source;share/services_discovery/hook/cmake_prefix_path.sh
-source;share/services_discovery/local_setup.bash
-source;share/services_discovery/local_setup.dsv
-source;share/services_discovery/local_setup.ps1
-source;share/services_discovery/local_setup.sh
-source;share/services_discovery/local_setup.zsh

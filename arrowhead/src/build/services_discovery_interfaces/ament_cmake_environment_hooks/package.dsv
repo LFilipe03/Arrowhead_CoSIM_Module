@@ -1,4 +1,0 @@
-source;share/services_discovery_interfaces/local_setup.bash
-source;share/services_discovery_interfaces/local_setup.dsv
-source;share/services_discovery_interfaces/local_setup.sh
-source;share/services_discovery_interfaces/local_setup.zsh

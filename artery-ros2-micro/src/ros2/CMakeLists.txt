@@ -2,6 +2,7 @@ set(SOURCES
     BasicRobotLifecycleController.cc
     Core.cc
     RobotObject.cc
+    ServiceObject.cc
     UniformRobotCreationPolicy.cc
     Ros2Node.cc
 )
@@ -21,7 +22,7 @@ macro(find_ros)
     endforeach()
 endmacro()
 
-find_ros(rclcpp gazebo_msgs micro_its_msgs micro_msgs etsi_its_msgs)
+find_ros(rclcpp gazebo_msgs arrowhead_msgs micro_its_msgs micro_msgs etsi_its_msgs)
 target_include_directories(ros2 PUBLIC ${ROS_INCLUDE_DIRS})
 target_link_libraries(ros2 PUBLIC ${ROS_LIBRARIES})
 

@@ -41,6 +41,22 @@ int RobotInetMobility::numInitStages() const
 void RobotInetMobility::initialize(int stage)
 {
     if (stage == inet::INITSTAGE_LOCAL) {
+
+        mSimulationPosition = inet::Coord(0, 0, 0);
+        mPosition = inet::Coord(0, 0, 0);
+        mSpeed = inet::Coord(0, 0, 0);
+
+        mOrientation.alpha = 0;
+        mYawRate.alpha = 0;
+
+        ros2::RobotObject robot;
+        robot.setHeading(0);
+        robot.setSpeed(0);
+        robot.setYawRate(0);
+        robot.setPosition({0,0,0});
+        mLastRobotObject = robot;
+        mLastSimulationRobotObject = robot;
+
         mVisualRepresentation = inet::getModuleFromPar<cModule>(par("visualRepresentation"), this, false);
         mCoordinateSystem = inet::getModuleFromPar<inet::IGeographicCoordinateSystem>(par("coordinateSystemModule"), this);
         omnetpp::createWatch("position", mPosition);
