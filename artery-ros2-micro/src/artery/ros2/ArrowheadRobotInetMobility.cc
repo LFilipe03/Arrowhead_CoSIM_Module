@@ -126,6 +126,10 @@ void ArrowheadRobotInetMobility::simulation_callback(const micro_its_msgs::msg::
 
 void ArrowheadRobotInetMobility::arrowhead_callback(const arrowhead_msgs::msg::ServiceRegistration::SharedPtr msg)
 {
+
+    EV_INFO << "[ArrowheadRobotInetMobility] - Received Arrowhead Service Registration message";
+
+
     ros2::ServiceObject service;
 
     service.setServiceValidation(msg->service_validation);

@@ -6,4 +6,7 @@
     <service type="artery.ros2.Ros2Service">
         <listener port="2002" />
     </service>
+    <service type="artery.ros2.ArrowheadService">
+        <listener port="2003" />
+    </service>
 </services>

@@ -22,7 +22,7 @@ namespace artery
 
 /* signal emitted by ArrowheadRobotInetMobility */
 static const simsignal_t serviceRegistryUpdatedSignal =
-    cComponent::registerSignal("serviceRegistryUpdatedSignal");
+    cComponent::registerSignal("serviceRegistryUpdated");
 
 Define_Module(ArrowheadService);
 
@@ -72,16 +72,16 @@ void ArrowheadService::initialize()
 
     /* Create ROS publisher */
 
-    auto& robot = getFacilities().getConst<ros2::RobotObject>();
-    std::string robotId = robot.getId();
+    //auto& robot = getFacilities().getConst<ros2::RobotObject>();
+    //std::string robotId = robot.getId();
 
-    std::string topic = robotId + "/arrowhead/service_registry";
+    //std::string topic = robotId + "/Arrowhead_Service_Registry_out";
 
     publisher =
         rosNode.getRosNode()->create_publisher<
-            arrowhead_msgs::msg::ServiceRegistration>(topic, 10);
+            arrowhead_msgs::msg::ServiceRegistration>("/Arrowhead_Service_Registry_out", 10);
 
-    EV_INFO << "ArrowheadService publishing to topic: " << topic << "\n";
+    EV_INFO << "ArrowheadService publishing to topic: /Arrowhead_Service_Registry_out\n";
 }
 
 void ArrowheadService::finish()
@@ -106,38 +106,32 @@ void ArrowheadService::trigger()
 {
     Enter_Method("trigger");
 
-    /* Example test packet transmission (same as Ros2Service) */
+	// use an ITS-AID reserved for testing purposes
+	static const vanetza::ItsAid example_its_aid = 16480;
 
-    static const vanetza::ItsAid exampleAid = 16480;
+	auto& mco = getFacilities().get_const<MultiChannelPolicy>();
+	auto& networks = getFacilities().get_const<NetworkInterfaceTable>();
 
-    auto& mco = getFacilities().get_const<MultiChannelPolicy>();
-    auto& networks = getFacilities().get_const<NetworkInterfaceTable>();
+	for (auto channel : mco.allChannels(example_its_aid)) {
+		auto network = networks.select(channel);
+		if (network) {
+			btp::DataRequestB req;
+			// use same port number as configured for listening on this channel
+			req.destination_port = host_cast(getPortNumber(channel));
+			req.gn.transport_type = geonet::TransportType::SHB;
+			req.gn.traffic_class.tc_id(static_cast<unsigned>(dcc::Profile::DP3));
+			req.gn.communication_profile = geonet::CommunicationProfile::ITS_G5;
+			req.gn.its_aid = example_its_aid;
 
-    for (auto channel : mco.allChannels(exampleAid)) {
+			cPacket* packet = new cPacket("Example Service Packet");
+			packet->setByteLength(42);
 
-        auto network = networks.select(channel);
-
-        if (!network) {
-            EV_ERROR << "No network interface for channel "
-                     << channel << "\n";
-            continue;
-        }
-
-        btp::DataRequestB req;
-
-        req.destination_port = host_cast(getPortNumber(channel));
-        req.gn.transport_type = geonet::TransportType::SHB;
-        req.gn.traffic_class.tc_id(
-            static_cast<unsigned>(dcc::Profile::DP3));
-        req.gn.communication_profile =
-            geonet::CommunicationProfile::ITS_G5;
-        req.gn.its_aid = exampleAid;
-
-        cPacket* packet = new cPacket("ArrowheadTestPacket");
-        packet->setByteLength(64);
-
-        request(req, packet, network.get());
-    }
+			// send packet on specific network interface
+			request(req, packet, network.get());
+		} else {
+			EV_ERROR << "No network interface available for channel " << channel << "\n";
+		}
+	}
 }
 
 void ArrowheadService::receiveSignal(
@@ -147,6 +141,9 @@ void ArrowheadService::receiveSignal(
     cObject* details)
 {
     Enter_Method("receiveSignal");
+
+    EV << "[ArrowheadService] - GOING TO PUBLISH TO ROS2";
+
 
     /* We expect a ServiceObject from mobility */
 
