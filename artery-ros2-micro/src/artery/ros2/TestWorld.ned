@@ -4,12 +4,13 @@ import inet.common.geometry.common.IGeographicCoordinateSystem;
 import inet.environment.contract.IPhysicalEnvironment;
 import inet.physicallayer.contract.packetlevel.IRadioMedium;
 import ros2.Connector;
+import artery.inet.RSU;
 
 network TestWorld
 {
     parameters:
         bool withPhysicalEnvironment = default(false);
-        int numRoadSideUnits = default(0);
+        int numRoadSideUnits = default(1);
 
     submodules:
         ros2: Connector {
@@ -43,7 +44,11 @@ network TestWorld
         arrowheadRobot: ArrowheadRobot {
             parameters:
                 @display("p=200,200;i=block/robot");
-                
         }
-        
+
+        cloudNode: CloudNode {
+            parameters:
+                @display("p=300,100;i=block/server");
+        }
+
 }

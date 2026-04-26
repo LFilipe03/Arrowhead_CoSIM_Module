@@ -1,0 +1,3 @@
+string system_name
+string service_definition
+string result

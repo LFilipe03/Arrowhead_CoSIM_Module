@@ -153,8 +153,12 @@ set_property(TARGET core APPEND PROPERTY SOURCES
     ros2/ArrowheadRobotPositionProvider.cc
     ros2/ArrowheadRobotMiddleware.cc
     ros2/ArrowheadService.cc
+    ros2/ArrowheadRsuService.cc
+    ros2/CloudNode.cc
 )
 target_link_libraries(core PUBLIC ros2)
+find_package(CURL REQUIRED)
+target_link_libraries(core PUBLIC CURL::libcurl)
 
 macro(add_artery_feature name)
     add_library(${name} SHARED ${ARGN})

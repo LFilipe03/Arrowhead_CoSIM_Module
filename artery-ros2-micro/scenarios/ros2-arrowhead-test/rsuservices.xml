@@ -1,0 +1,5 @@
+<services>
+    <service type="artery.ros2.ArrowheadRsuService">
+        <listener port="2004" />
+    </service>
+</services>

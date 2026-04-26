@@ -53,5 +53,4 @@ Running the simulation:
 
     cmake --build build --target run_ros2_road_detour
 
-     
-    
+    cmake --build build --target run_ros2-arrowhead-test

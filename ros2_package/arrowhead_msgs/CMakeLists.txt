@@ -29,6 +29,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ServiceData.msg"
   "msg/ServiceMetadata.msg"
   "msg/ServiceRegistration.msg"
+  "msg/ArrowheadResponse.msg"
   DEPENDENCIES builtin_interfaces std_msgs nav_msgs
 )
 
